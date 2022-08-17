@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Item
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Item
+  - Trim
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Slot
+    uniqueID: 1090114733
+    locked: 0
+  - name: Desk
+    uniqueID: 2700432981
+    locked: 0
+  - name: Object
+    uniqueID: 3203605073
+    locked: 0
+  - name: Item
+    uniqueID: 2166259029
+    locked: 0
+  - name: Player
+    uniqueID: 2713474369
+    locked: 0
+  - name: Front Item
+    uniqueID: 1710555133
+    locked: 0
