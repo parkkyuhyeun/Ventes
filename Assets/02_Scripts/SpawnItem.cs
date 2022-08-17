@@ -10,7 +10,7 @@ public class SpawnItem : MonoBehaviour
     private void Start()  //처음 시작할때 아이템 생성해주고 알맞은 리스트에 넣어주기
     {
         InteractionItem item = Instantiate(itemPrefab);
-        item.gameObject.name = item.gameObject.name.Replace("(Clone)", "");
+        item.gameObject.name = item.gameObject.name.Replace("(Clone)", ""); //아이템이 생성될때 이름 뒤에 붙은 (Clone) 을 지워주는 코드
         item.transform.position = transform.position;
         switch (itemPrefab.gameObject.name)
         {
