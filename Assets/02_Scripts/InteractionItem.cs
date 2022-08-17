@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class InteractionItem : MonoBehaviour
 {
-    private bool isCatch = false;
+    private bool onCatch = false;
+    private bool isCooking = false;
+    public bool IsCooking { get => isCooking; set => isCooking = value; }
     Player player;
     SpriteRenderer spriteRenderer;
     public void OnCatch(Transform targetTrm)
     {
-        isCatch = true;
+        onCatch = true;
     }
     public void OnPut(Transform targetTrm)
     {
-        if (player.CurrentCookware != null &&player.CurrentCookware.onItem) return;
-        isCatch = false;
+        onCatch = false;
         transform.position = targetTrm.position;
     }
     void Start()
@@ -25,7 +26,7 @@ public class InteractionItem : MonoBehaviour
 
     void Update()
     {
-        if (isCatch)
+        if (onCatch)
         {
             if(player.LookAt.localPosition == new Vector3(0, -1))
             {

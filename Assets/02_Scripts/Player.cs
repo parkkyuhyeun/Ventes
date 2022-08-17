@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     bool isCatch = false;
     InteractionItem currentItem;
     Cookware currentCookware;
-    public Cookware CurrentCookware { get => currentCookware; }
     
     public Transform LookAt { get => lookAt; }
     void Start()
@@ -27,10 +26,17 @@ public class Player : MonoBehaviour
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!isCatch) Catch();
-            else Put();
+            if (!isCatch)
+            {
+                Catch();
+            }
+            else
+            {
+                Put();
+            }
         }
     }
+
     private void Move()
     {
         anim.SetBool("isWalk_Back", Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow));
@@ -70,14 +76,13 @@ public class Player : MonoBehaviour
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - 0.5f), lookAt.transform.right, Color.yellow, maxDistance);
         if (hit)
         {
-            if (!isCatch)
+            currentItem = hit.transform.GetComponent<InteractionItem>();
+
+            if (!isCatch && !currentItem.IsCooking) //조리 중에는 못가져가게 하기 위해서
             {
                 isCatch = true;
-                Debug.Log("catch");
-                Debug.Log("hit");
-                InteractionItem interactionItem = hit.transform.GetComponent<InteractionItem>();
-                interactionItem.OnCatch(lookAt);
-                currentItem = interactionItem;
+                currentItem.OnCatch(lookAt);
+                if (currentCookware != null && currentCookware.onItem) currentCookware.onItem = false;
             }
         }
     }
@@ -88,15 +93,15 @@ public class Player : MonoBehaviour
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - 0.5f), lookAt.transform.right, Color.yellow, maxDistance);
         if (hit)
         {
-            if (isCatch)
+            currentCookware = hit.transform.GetComponent<Cookware>();
+            if (isCatch && !currentItem.IsCooking && !currentCookware.onItem)
             {
                 if (hit.transform.gameObject.layer == 8)
                 {
-                    Debug.Log("Put");
                     currentItem.OnPut(hit.transform);
                     isCatch = false;
-                    currentCookware = hit.transform.GetComponent<Cookware>();
                     currentCookware.onItem = true;
+                    currentCookware.Cook(currentItem);
                 }
             }
         }

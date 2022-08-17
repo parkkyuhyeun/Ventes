@@ -163,6 +163,8 @@ GameObject:
   m_Component:
   - component: {fileID: 45934703}
   - component: {fileID: 45934704}
+  - component: {fileID: 45934705}
+  - component: {fileID: 45934706}
   m_Layer: 0
   m_Name: BunSpawner
   m_TagString: Untagged
@@ -196,7 +198,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 9130660947041814958, guid: c45cf5f3de3b69b479c23461b7358e32, type: 3}
+  itemPrefab: {fileID: 6398845380396212444, guid: c45cf5f3de3b69b479c23461b7358e32, type: 3}
+  exist: 1
+--- !u!61 &45934705
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45934702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &45934706
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45934702}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &172514417
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +438,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onItem: 0
   cookTime: 0
-  cookedItem: []
+  item: {fileID: 0}
+  cookingList: []
+  cookedItemList:
+  - {fileID: 6736705617242305927, guid: 36353763d103f8f4e8825d5ba4565110, type: 3}
+  - {fileID: 3235075793489668516, guid: c026b9eabbd71c54ba73b5d1b6a99579, type: 3}
+  - {fileID: 8001316656302525822, guid: 09cb1f2e8153ae247a90c04d25fdab29, type: 3}
+  - {fileID: 5004160272765898345, guid: 06596d20c5d174e49a520d3f9ff88619, type: 3}
+  - {fileID: 7580787180571014459, guid: d15e4bc7b61eab54c9c8d07cb0e6775e, type: 3}
+  - {fileID: 8767981715428709543, guid: c3354d77921111446b356eaa9c87c8ef, type: 3}
+  - {fileID: 7050991408167921847, guid: f1e028ca3c8f2b548b624a45e6bc8d1b, type: 3}
+  - {fileID: 2738315123303414638, guid: 5a83d32ef59330446953c7c295c3e1ad, type: 3}
 --- !u!1 &226156505
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +459,8 @@ GameObject:
   m_Component:
   - component: {fileID: 226156506}
   - component: {fileID: 226156507}
+  - component: {fileID: 226156508}
+  - component: {fileID: 226156509}
   m_Layer: 0
   m_Name: OnionSpawner
   m_TagString: Untagged
@@ -432,7 +494,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 2703738912811195500, guid: 07ce561ec35c2cb45ae526620a0969b5, type: 3}
+  itemPrefab: {fileID: -2432638183073388739, guid: 07ce561ec35c2cb45ae526620a0969b5, type: 3}
+  exist: 1
+--- !u!61 &226156508
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226156505}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &226156509
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226156505}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &443090924
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +705,8 @@ GameObject:
   m_Component:
   - component: {fileID: 496029914}
   - component: {fileID: 496029915}
+  - component: {fileID: 496029916}
+  - component: {fileID: 496029917}
   m_Layer: 0
   m_Name: ChickenSpawner
   m_TagString: Untagged
@@ -628,7 +740,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 2574475754191286713, guid: 3e002f34a54e23f4b82f514fb0a2b566, type: 3}
+  itemPrefab: {fileID: 3384915324745274492, guid: 3e002f34a54e23f4b82f514fb0a2b566, type: 3}
+  exist: 1
+--- !u!61 &496029916
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496029913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &496029917
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496029913}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &538672174
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +995,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onItem: 0
   cookTime: 0
-  cookedItem: []
+  item: {fileID: 0}
+  cookingList: []
+  cookedItemList:
+  - {fileID: 6736705617242305927, guid: 36353763d103f8f4e8825d5ba4565110, type: 3}
+  - {fileID: 3235075793489668516, guid: c026b9eabbd71c54ba73b5d1b6a99579, type: 3}
+  - {fileID: 8001316656302525822, guid: 09cb1f2e8153ae247a90c04d25fdab29, type: 3}
+  - {fileID: 5004160272765898345, guid: 06596d20c5d174e49a520d3f9ff88619, type: 3}
+  - {fileID: 7580787180571014459, guid: d15e4bc7b61eab54c9c8d07cb0e6775e, type: 3}
+  - {fileID: 8767981715428709543, guid: c3354d77921111446b356eaa9c87c8ef, type: 3}
+  - {fileID: 7050991408167921847, guid: f1e028ca3c8f2b548b624a45e6bc8d1b, type: 3}
+  - {fileID: 2738315123303414638, guid: 5a83d32ef59330446953c7c295c3e1ad, type: 3}
 --- !u!1 &585728779
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +1031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585728779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.317, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1278572064}
@@ -928,6 +1098,8 @@ GameObject:
   m_Component:
   - component: {fileID: 632301225}
   - component: {fileID: 632301226}
+  - component: {fileID: 632301227}
+  - component: {fileID: 632301228}
   m_Layer: 0
   m_Name: CabbageSpawner
   m_TagString: Untagged
@@ -961,7 +1133,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 2605198823773357505, guid: f7aec6bb6368a4f418cfea944bd84a82, type: 3}
+  itemPrefab: {fileID: 7741166234308140682, guid: f7aec6bb6368a4f418cfea944bd84a82, type: 3}
+  exist: 1
+--- !u!61 &632301227
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632301224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &632301228
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632301224}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &646692156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1413,8 @@ GameObject:
   m_Component:
   - component: {fileID: 827974656}
   - component: {fileID: 827974657}
+  - component: {fileID: 827974658}
+  - component: {fileID: 827974659}
   m_Layer: 0
   m_Name: MeatSpawner
   m_TagString: Untagged
@@ -1226,7 +1448,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 5538630308145714530, guid: 701fdcc920de0394ea765a2a618dd64a, type: 3}
+  itemPrefab: {fileID: -3026668460494218248, guid: 701fdcc920de0394ea765a2a618dd64a, type: 3}
+  exist: 1
+--- !u!61 &827974658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827974655}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &827974659
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827974655}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &876905442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1810,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.45477998, y: 0}
+  m_Offset: {x: -0.07326734, y: -0.017082691}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1551,7 +1821,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4451835, y: 1}
+  m_Size: {x: 1.638787, y: 0.9658346}
   m_EdgeRadius: 0
 --- !u!4 &1278572064
 Transform:
@@ -1561,7 +1831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278572062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.32, y: -4.49, z: 0}
+  m_LocalPosition: {x: 4.05, y: -4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1853155511}
@@ -1582,8 +1852,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onItem: 0
-  cookTime: 0
-  cookedItem: []
+  cookTime: 5
+  item: {fileID: 0}
+  cookingList: []
+  cookedItemList:
+  - {fileID: 6736705617242305927, guid: 36353763d103f8f4e8825d5ba4565110, type: 3}
+  - {fileID: 3235075793489668516, guid: c026b9eabbd71c54ba73b5d1b6a99579, type: 3}
+  - {fileID: 8001316656302525822, guid: 09cb1f2e8153ae247a90c04d25fdab29, type: 3}
+  - {fileID: 5004160272765898345, guid: 06596d20c5d174e49a520d3f9ff88619, type: 3}
+  - {fileID: 7580787180571014459, guid: d15e4bc7b61eab54c9c8d07cb0e6775e, type: 3}
+  - {fileID: 8767981715428709543, guid: c3354d77921111446b356eaa9c87c8ef, type: 3}
+  - {fileID: 7050991408167921847, guid: f1e028ca3c8f2b548b624a45e6bc8d1b, type: 3}
+  - {fileID: 2738315123303414638, guid: 5a83d32ef59330446953c7c295c3e1ad, type: 3}
 --- !u!1 &1350929547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1988,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onItem: 0
   cookTime: 0
-  cookedItem: []
+  item: {fileID: 0}
+  cookingList: []
+  cookedItemList:
+  - {fileID: 6736705617242305927, guid: 36353763d103f8f4e8825d5ba4565110, type: 3}
+  - {fileID: 3235075793489668516, guid: c026b9eabbd71c54ba73b5d1b6a99579, type: 3}
+  - {fileID: 8001316656302525822, guid: 09cb1f2e8153ae247a90c04d25fdab29, type: 3}
+  - {fileID: 5004160272765898345, guid: 06596d20c5d174e49a520d3f9ff88619, type: 3}
+  - {fileID: 7580787180571014459, guid: d15e4bc7b61eab54c9c8d07cb0e6775e, type: 3}
+  - {fileID: 8767981715428709543, guid: c3354d77921111446b356eaa9c87c8ef, type: 3}
+  - {fileID: 7050991408167921847, guid: f1e028ca3c8f2b548b624a45e6bc8d1b, type: 3}
+  - {fileID: 2738315123303414638, guid: 5a83d32ef59330446953c7c295c3e1ad, type: 3}
 --- !u!1 &1561704499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +2048,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1662982601}
   - component: {fileID: 1662982602}
+  - component: {fileID: 1662982603}
+  - component: {fileID: 1662982604}
   m_Layer: 0
   m_Name: ShrimpSpawner
   m_TagString: Untagged
@@ -1791,7 +2083,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1686207560312640577, guid: a3b9f0a0cd13e43468f6ce5b5a5563aa, type: 3}
+  itemPrefab: {fileID: 6065582245681539062, guid: a3b9f0a0cd13e43468f6ce5b5a5563aa, type: 3}
+  exist: 1
+--- !u!61 &1662982603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662982600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &1662982604
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662982600}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1736970542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +2142,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1736970543}
   - component: {fileID: 1736970544}
+  - component: {fileID: 1736970545}
+  - component: {fileID: 1736970546}
   m_Layer: 0
   m_Name: CheeseSpawner
   m_TagString: Untagged
@@ -1835,7 +2177,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 5200856784408866485, guid: 831b35570166a8d489ab1c84f58cc0a8, type: 3}
+  itemPrefab: {fileID: -4673829135491371325, guid: 831b35570166a8d489ab1c84f58cc0a8, type: 3}
+  exist: 1
+--- !u!61 &1736970545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736970542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &1736970546
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736970542}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1747987216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6873,7 +7263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853155510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 0, z: 0}
+  m_LocalPosition: {x: -0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1278572064}
@@ -7097,7 +7487,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onItem: 0
   cookTime: 0
-  cookedItem: []
+  item: {fileID: 0}
+  cookingList: []
+  cookedItemList:
+  - {fileID: 6736705617242305927, guid: 36353763d103f8f4e8825d5ba4565110, type: 3}
+  - {fileID: 3235075793489668516, guid: c026b9eabbd71c54ba73b5d1b6a99579, type: 3}
+  - {fileID: 8001316656302525822, guid: 09cb1f2e8153ae247a90c04d25fdab29, type: 3}
+  - {fileID: 5004160272765898345, guid: 06596d20c5d174e49a520d3f9ff88619, type: 3}
+  - {fileID: 7580787180571014459, guid: d15e4bc7b61eab54c9c8d07cb0e6775e, type: 3}
+  - {fileID: 8767981715428709543, guid: c3354d77921111446b356eaa9c87c8ef, type: 3}
+  - {fileID: 7050991408167921847, guid: f1e028ca3c8f2b548b624a45e6bc8d1b, type: 3}
+  - {fileID: 2738315123303414638, guid: 5a83d32ef59330446953c7c295c3e1ad, type: 3}
 --- !u!1 &2052641566
 GameObject:
   m_ObjectHideFlags: 0
@@ -7108,6 +7508,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2052641567}
   - component: {fileID: 2052641568}
+  - component: {fileID: 2052641569}
+  - component: {fileID: 2052641570}
   m_Layer: 0
   m_Name: TomatoSpawner
   m_TagString: Untagged
@@ -7141,7 +7543,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 2739413589215947110, guid: ccf7a041af0d3e8489a5a950c408eeef, type: 3}
+  itemPrefab: {fileID: -5798987156626851080, guid: ccf7a041af0d3e8489a5a950c408eeef, type: 3}
+  exist: 1
+--- !u!61 &2052641569
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052641566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &2052641570
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052641566}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2114870155
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,6 +7602,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2114870156}
   - component: {fileID: 2114870157}
+  - component: {fileID: 2114870158}
+  - component: {fileID: 2114870159}
   m_Layer: 0
   m_Name: CucumberSpawner
   m_TagString: Untagged
@@ -7185,4 +7637,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760caf9ae9f48874f88a228ddef942ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 948604184692148134, guid: 64c4934e09ec6b144bb432dcbbec7952, type: 3}
+  itemPrefab: {fileID: 4251813054558822706, guid: 64c4934e09ec6b144bb432dcbbec7952, type: 3}
+  exist: 1
+--- !u!61 &2114870158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114870155}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &2114870159
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114870155}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
