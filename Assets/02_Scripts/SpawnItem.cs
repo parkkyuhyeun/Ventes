@@ -5,14 +5,11 @@ using UnityEngine;
 public class SpawnItem : MonoBehaviour
 {
     [SerializeField] InteractionItem itemPrefab;
-    public bool exist = true;
+    public bool exist = false;
 
-    private void Start()  //처음 시작할때 아이템 생성해주고 알맞은 리스트에 넣어주기
+    void ItemDivison(InteractionItem item) //처음 시작할때 아이템 생성해주고 알맞은 리스트에 넣어주기
     {
-        InteractionItem item = Instantiate(itemPrefab);
-        item.gameObject.name = item.gameObject.name.Replace("(Clone)", ""); //아이템이 생성될때 이름 뒤에 붙은 (Clone) 을 지워주는 코드
-        item.transform.position = transform.position;
-        switch (itemPrefab.gameObject.name)
+        switch (item.gameObject.name)
         {
             case "Meat":
             case "Shrimp": //Meat와 Shrimp 는 굽기위해서 버너의 cooking 리스트에 넣어줌 *cookware 스크립트 11번 째 줄 참고
@@ -31,7 +28,6 @@ public class SpawnItem : MonoBehaviour
                 GameObject.Find("Cutting Board").GetComponent<Cookware>().cookingList.Add(item);
                 break;
         }
-
     }
 
     void Update()
@@ -46,6 +42,7 @@ public class SpawnItem : MonoBehaviour
             InteractionItem item = Instantiate(itemPrefab);
             item.gameObject.name = item.gameObject.name.Replace("(Clone)", "");
             item.transform.position = transform.position;
+            ItemDivison(item);
             exist = true;
         }
     }

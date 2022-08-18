@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Cookware : MonoBehaviour
 {
     public bool onItem;
+    public UIManager uiManager;
 
     public float cookTime;
     public InteractionItem item; //현재 아이템

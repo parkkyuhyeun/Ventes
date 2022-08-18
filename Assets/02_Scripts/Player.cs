@@ -82,7 +82,6 @@ public class Player : MonoBehaviour
             {
                 isCatch = true;
                 currentItem.OnCatch(lookAt);
-                if (currentCookware != null && currentCookware.onItem) currentCookware.onItem = false;
             }
         }
     }
@@ -100,7 +99,6 @@ public class Player : MonoBehaviour
                 {
                     currentItem.OnPut(hit.transform);
                     isCatch = false;
-                    currentCookware.onItem = true;
                     currentCookware.Cook(currentItem);
                 }
             }

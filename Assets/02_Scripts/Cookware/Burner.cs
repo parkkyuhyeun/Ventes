@@ -12,15 +12,20 @@ public class Burner : Cookware
 
     public override IEnumerator Cooking()
     {
-        item.IsCooking = true;
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.LeftControl));
-        for(int i=0; i < cookedItemList.Count; i++)
+        if (cookingList.Contains(item))
         {
-            if (cookedItemList[i].name == $"Cooked{item.name}")
+            item.IsCooking = true;
+            uiManager.ShowClickImage();
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.LeftControl));
+            uiManager.FillSlider(this.gameObject, cookTime);
+            for (int i=0; i < cookedItemList.Count; i++)
             {
-                yield return new WaitForSeconds(cookTime);
-                item.GetComponent<SpriteRenderer>().sprite = cookedItemList[i].GetComponent<SpriteRenderer>().sprite;
-                item.IsCooking = false;
+                if (cookedItemList[i].name == $"Cooked{item.name}")
+                {
+                    yield return new WaitForSeconds(cookTime);
+                    item.GetComponent<SpriteRenderer>().sprite = cookedItemList[i].GetComponent<SpriteRenderer>().sprite;
+                    item.IsCooking = false;
+                }
             }
         }
     }
