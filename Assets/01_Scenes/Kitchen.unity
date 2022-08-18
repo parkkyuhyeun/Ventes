@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onItem: 0
-  cookTime: 0
+  cookTime: 5
   item: {fileID: 0}
   cookingList: []
   cookedItemList:
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onItem: 0
-  cookTime: 0
+  cookTime: 5
   item: {fileID: 0}
   cookingList: []
   cookedItemList:
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onItem: 0
-  cookTime: 0
+  cookTime: 5
   item: {fileID: 0}
   cookingList: []
   cookedItemList:
@@ -7486,7 +7486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onItem: 0
-  cookTime: 0
+  cookTime: 5
   item: {fileID: 0}
   cookingList: []
   cookedItemList:
