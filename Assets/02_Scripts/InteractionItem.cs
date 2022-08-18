@@ -6,7 +6,9 @@ public class InteractionItem : MonoBehaviour
 {
     private bool onCatch = false;
     private bool isCooking = false;
+    private bool isCooked = false;
     public bool IsCooking { get => isCooking; set => isCooking = value; }
+    public bool IsCooked { get => isCooked; set => isCooked = value; }
     Player player;
     SpriteRenderer spriteRenderer;
     public void OnCatch(Transform targetTrm)

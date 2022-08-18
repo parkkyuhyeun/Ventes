@@ -25,6 +25,7 @@ public class Burner : Cookware
                     yield return new WaitForSeconds(cookTime);
                     item.GetComponent<SpriteRenderer>().sprite = cookedItemList[i].GetComponent<SpriteRenderer>().sprite;
                     item.IsCooking = false;
+                    item.IsCooked = true;
                 }
             }
         }

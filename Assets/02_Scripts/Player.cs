@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
         if (hit)
         {
             currentCookware = hit.transform.GetComponent<Cookware>();
-            if (isCatch && !currentItem.IsCooking && !currentCookware.onItem)
+            if (isCatch && !currentItem.IsCooking && !currentCookware.onItem && !currentItem.IsCooked)
             {
                 if (hit.transform.gameObject.layer == 8)
                 {

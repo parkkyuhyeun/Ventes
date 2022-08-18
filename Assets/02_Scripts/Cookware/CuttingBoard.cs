@@ -25,6 +25,7 @@ public class CuttingBoard : Cookware
                     yield return new WaitForSeconds(cookTime);
                     item.GetComponent<SpriteRenderer>().sprite = cookedItemList[i].GetComponent<SpriteRenderer>().sprite; //다 구워진 아이템 스프라이트로 바꾸기
                     item.IsCooking = false; //조리 중 상태 해제
+                    item.IsCooked = true;
                 }
             }
         }
