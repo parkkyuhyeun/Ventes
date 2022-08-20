@@ -14,16 +14,25 @@ public class Player : MonoBehaviour
     bool isCatch = false;
     InteractionItem currentItem;
     Cookware currentCookware;
-    
+
+    CreateBurger createBurger;
+
+    [SerializeField] private List<RecipeEnum> currentRecipe = new List<RecipeEnum>();
+
     public Transform LookAt { get => lookAt; }
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        createBurger = GameObject.Find("Plate").GetComponent<CreateBurger>();
     }
     void Update()
     {
         Move();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if(currentRecipe.Count > 0) createBurger.Create(currentRecipe);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!isCatch)
@@ -80,6 +89,11 @@ public class Player : MonoBehaviour
 
             if (!isCatch && !currentItem.IsCooking) //조리 중에는 못가져가게 하기 위해서
             {
+                if (currentItem.transform.parent != null)
+                {
+                    Mix(currentItem, 1);
+                    currentItem.transform.SetParent(null);
+                }
                 isCatch = true;
                 currentItem.OnCatch(lookAt);
             }
@@ -92,15 +106,98 @@ public class Player : MonoBehaviour
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - 0.5f), lookAt.transform.right, Color.yellow, maxDistance);
         if (hit)
         {
-            currentCookware = hit.transform.GetComponent<Cookware>();
-            if (isCatch && !currentItem.IsCooking && !currentCookware.onItem && !currentItem.IsCooked)
+            if(hit.transform.gameObject.layer == 8)
             {
-                if (hit.transform.gameObject.layer == 8)
+                currentCookware = hit.transform.GetComponent<Cookware>();
+                if (isCatch && !currentItem.IsCooking && !currentCookware.onItem)
                 {
-                    currentItem.OnPut(hit.transform);
-                    isCatch = false;
-                    currentCookware.Cook(currentItem);
+                    if (!currentItem.IsCooked)
+                    {
+                        currentItem.OnPut(hit.transform);
+                        isCatch = false;
+                        currentCookware.Cook(currentItem);
+                    }
                 }
+            }
+            if(hit.transform.gameObject.layer == 9)
+            {
+                if(isCatch && (currentItem.IsCooked || currentItem.name == "Bun"))
+                {
+                    Mix(currentItem, 0);
+                    currentItem.OnPut(hit.transform);
+                    currentItem.transform.SetParent(GameObject.Find("CurrentRecipe").transform);
+                    isCatch = false;
+                }
+            }
+        }
+    }
+
+    private void Mix(InteractionItem item, int type)
+    {
+        if(type == 0)
+        {
+            switch (item.name)
+            {
+                case "Tomato":
+                    currentRecipe.Add(RecipeEnum.Tomato);
+                    break;
+                case "Cabbage":
+                    currentRecipe.Add(RecipeEnum.Cabbage);
+                    break;
+                case "Cheese":
+                    currentRecipe.Add(RecipeEnum.Cheese);
+                    break;
+                case "Meat":
+                    currentRecipe.Add(RecipeEnum.Meat);
+                    break;
+                case "Cucumber":
+                    currentRecipe.Add(RecipeEnum.Cucumber);
+                    break;
+                case "Onion":
+                    currentRecipe.Add(RecipeEnum.Onion);
+                    break;
+                case "Shrimp":
+                    currentRecipe.Add(RecipeEnum.Shrimp);
+                    break;
+                case "Chicken":
+                    currentRecipe.Add(RecipeEnum.Chicken);
+                    break;
+                case "Bun":
+                    currentRecipe.Add(RecipeEnum.Bun);
+                    break;
+            }
+        }
+        if(type == 1)
+        {
+            switch (item.name)
+            {
+                case "Tomato":
+                    currentRecipe.Remove(RecipeEnum.Tomato);
+                    break;
+                case "Cabbage":
+                    currentRecipe.Remove(RecipeEnum.Cabbage);
+                    break;
+                case "Cheese":
+                    currentRecipe.Remove(RecipeEnum.Cheese);
+                    break;
+                case "Meat":
+                    currentRecipe.Remove(RecipeEnum.Meat);
+                    break;
+                case "Cucumber":
+                    currentRecipe.Remove(RecipeEnum.Cucumber);
+                    break;
+                case "Onion":
+                    currentRecipe.Remove(RecipeEnum.Onion);
+                    break;
+                case "Shrimp":
+                    currentRecipe.Remove(RecipeEnum.Shrimp);
+                    break;
+                case "Chicken":
+                    currentRecipe.Remove(RecipeEnum.Chicken);
+                    break;
+                case "Bun":
+                    currentRecipe.Remove(RecipeEnum.Bun);
+                    break;
             }
         }
     }
