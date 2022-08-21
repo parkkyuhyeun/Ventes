@@ -53,11 +53,11 @@ public class CreateBurger : MonoBehaviour
                 GameObject newBurger = recipes.FirstOrDefault(x => x.Value == recipes[burger]).Key;
                 Instantiate(newBurger, transform);
             }
-            recipe.Clear();
-            foreach (var child in children)
-            {
-                Destroy(child.gameObject);
-            }
+        }
+        recipe.Clear();
+        foreach (var child in children)
+        {
+            Destroy(child.gameObject);
         }
     }
 }
