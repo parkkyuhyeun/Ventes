@@ -50,10 +50,10 @@ public class CreateBurger : MonoBehaviour
         #endregion
         #region KH버거 레시피
         recipes[burgers[4]].Add(RecipeEnum.Bun);
-        recipes[burgers[4]].Add(RecipeEnum.Meat);
+        recipes[burgers[4]].Add(RecipeEnum.Cucumber);
         recipes[burgers[4]].Add(RecipeEnum.Cabbage);
         recipes[burgers[4]].Add(RecipeEnum.Cheese);
-        recipes[burgers[4]].Add(RecipeEnum.Tomato);
+        recipes[burgers[4]].Add(RecipeEnum.Chicken);
         recipes[burgers[4]].Add(RecipeEnum.Bun);
         #endregion
     }
