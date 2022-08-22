@@ -29,6 +29,7 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[1]].Add(RecipeEnum.Shrimp);
         recipes[burgers[1]].Add(RecipeEnum.Cabbage);
         recipes[burgers[1]].Add(RecipeEnum.Tomato);
+        recipes[burgers[1]].Add(RecipeEnum.Onion);
         recipes[burgers[1]].Add(RecipeEnum.Bun);
         #endregion
         #region 치킨버거 레시피
@@ -36,7 +37,24 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[2]].Add(RecipeEnum.Chicken);
         recipes[burgers[2]].Add(RecipeEnum.Cabbage);
         recipes[burgers[2]].Add(RecipeEnum.Cheese);
+        recipes[burgers[2]].Add(RecipeEnum.Cucumber);
         recipes[burgers[2]].Add(RecipeEnum.Bun);
+        #endregion
+        #region GGM버거 레시피
+        recipes[burgers[3]].Add(RecipeEnum.Bun);
+        recipes[burgers[3]].Add(RecipeEnum.Cabbage);
+        recipes[burgers[3]].Add(RecipeEnum.Chicken);
+        recipes[burgers[3]].Add(RecipeEnum.Meat);
+        recipes[burgers[3]].Add(RecipeEnum.Cheese);
+        recipes[burgers[3]].Add(RecipeEnum.Bun);
+        #endregion
+        #region KH버거 레시피
+        recipes[burgers[4]].Add(RecipeEnum.Bun);
+        recipes[burgers[4]].Add(RecipeEnum.Meat);
+        recipes[burgers[4]].Add(RecipeEnum.Cabbage);
+        recipes[burgers[4]].Add(RecipeEnum.Cheese);
+        recipes[burgers[4]].Add(RecipeEnum.Tomato);
+        recipes[burgers[4]].Add(RecipeEnum.Bun);
         #endregion
     }
 
