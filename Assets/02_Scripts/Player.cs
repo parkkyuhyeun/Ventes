@@ -129,6 +129,15 @@ public class Player : MonoBehaviour
                     isCatch = false;
                 }
             }
+            if(hit.transform.gameObject.layer == 10)
+            {
+                if (isCatch)
+                {
+                    currentItem.OnPut(hit.transform);
+                    OrderManager.Instance.Submission(currentItem.gameObject);
+                    isCatch = false;
+                }
+            }
         }
     }
 

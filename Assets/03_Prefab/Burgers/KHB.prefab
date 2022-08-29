@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6251351528261170089}
   - component: {fileID: 1305125821807010978}
   m_Layer: 7
-  m_Name: ShrimpB
+  m_Name: KHB
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -2128708267
   m_SortingLayer: 4
   m_SortingOrder: 5
-  m_Sprite: {fileID: 4904731679297038818, guid: 1fe181cedefa55d4197856d5029bb911, type: 3}
+  m_Sprite: {fileID: -4287871594585428985, guid: 1fe181cedefa55d4197856d5029bb911, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000011920929, y: -0.048918247}
+  m_Offset: {x: 0.009349942, y: 0.037399292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5.000939}
+    oldSize: {x: 5, y: 5.1884747}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.37537, y: 4.8645535}
+  m_Size: {x: 4.3472147, y: 5.1512938}
   m_EdgeRadius: 0
 --- !u!50 &-6251351528261170089
 Rigidbody2D:
