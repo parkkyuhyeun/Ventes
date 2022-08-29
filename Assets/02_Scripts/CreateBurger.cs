@@ -22,7 +22,6 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[0]].Add(RecipeEnum.Cabbage);
         recipes[burgers[0]].Add(RecipeEnum.Cheese);
         recipes[burgers[0]].Add(RecipeEnum.Tomato);
-        recipes[burgers[0]].Add(RecipeEnum.Bun);
         #endregion
         #region 새우버거 레시피
         recipes[burgers[1]].Add(RecipeEnum.Bun);
@@ -30,7 +29,6 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[1]].Add(RecipeEnum.Cabbage);
         recipes[burgers[1]].Add(RecipeEnum.Tomato);
         recipes[burgers[1]].Add(RecipeEnum.Onion);
-        recipes[burgers[1]].Add(RecipeEnum.Bun);
         #endregion
         #region 치킨버거 레시피
         recipes[burgers[2]].Add(RecipeEnum.Bun);
@@ -38,7 +36,6 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[2]].Add(RecipeEnum.Cabbage);
         recipes[burgers[2]].Add(RecipeEnum.Cheese);
         recipes[burgers[2]].Add(RecipeEnum.Cucumber);
-        recipes[burgers[2]].Add(RecipeEnum.Bun);
         #endregion
         #region GGM버거 레시피
         recipes[burgers[3]].Add(RecipeEnum.Bun);
@@ -46,7 +43,6 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[3]].Add(RecipeEnum.Chicken);
         recipes[burgers[3]].Add(RecipeEnum.Meat);
         recipes[burgers[3]].Add(RecipeEnum.Cheese);
-        recipes[burgers[3]].Add(RecipeEnum.Bun);
         #endregion
         #region KH버거 레시피
         recipes[burgers[4]].Add(RecipeEnum.Bun);
@@ -54,7 +50,6 @@ public class CreateBurger : MonoBehaviour
         recipes[burgers[4]].Add(RecipeEnum.Onion);
         recipes[burgers[4]].Add(RecipeEnum.Cheese);
         recipes[burgers[4]].Add(RecipeEnum.Chicken);
-        recipes[burgers[4]].Add(RecipeEnum.Bun);
         #endregion
     }
 
@@ -75,6 +70,7 @@ public class CreateBurger : MonoBehaviour
         recipe.Clear();
         foreach (var child in children)
         {
+            if (child == currentRecipe) continue;
             Destroy(child.gameObject);
         }
     }

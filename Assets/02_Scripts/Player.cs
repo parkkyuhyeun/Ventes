@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform lookAt;
     Animator anim;
     Rigidbody2D rigid;
-    float maxDistance = 5f;
+    float maxDistance = 3f;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] LayerMask targetLayer2;
     bool isCatch = false;

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance = null;
+    [SerializeField] int coin = 100;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class OrderManager : MonoBehaviour
             GameObject prefab = orders[Random.Range(0, orders.Length)];
             GameObject order = Instantiate(prefab, parent);
             currentOrders.Add(order);
-            yield return new WaitForSeconds(20f);
+            yield return new WaitForSeconds(35f);
         }
     }
 
@@ -43,6 +44,7 @@ public class OrderManager : MonoBehaviour
         if (currentOrders[0].name == item.name)
         {
             Debug.Log("¼º°ø");
+            FindObjectOfType<ScoreManager>().AddScore(coin);
         }
         else
         {

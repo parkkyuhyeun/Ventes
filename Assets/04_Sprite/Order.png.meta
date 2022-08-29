@@ -76,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,7 +136,7 @@ TextureImporter:
       name: Order_0
       rect:
         serializedVersion: 2
-        x: 199
+        x: 202
         y: 719
         width: 160
         height: 160
@@ -157,7 +157,7 @@ TextureImporter:
       name: Order_1
       rect:
         serializedVersion: 2
-        x: 681
+        x: 683
         y: 719
         width: 160
         height: 160
@@ -178,7 +178,7 @@ TextureImporter:
       name: Order_2
       rect:
         serializedVersion: 2
-        x: 1159
+        x: 1161
         y: 719
         width: 160
         height: 160
@@ -223,7 +223,7 @@ TextureImporter:
         x: 2119
         y: 719
         width: 160
-        height: 166
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
